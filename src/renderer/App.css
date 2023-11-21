@@ -1,0 +1,54 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+
+@font-face {
+  font-family: coolveticaItalic;
+  src: url(../../assets/fonts/coolvetica\ rg.otf);
+}
+body {
+  position: relative;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    200.96deg,
+    #fedc2a -29.09%,
+    #dd5789 51.77%,
+    #7a2c9e 129.35%
+  );
+  background-size: 300%;
+  font-family: coolveticaItalic;
+  overflow-y: hidden;
+  display: flex;
+  animation: bg-animation 3s infinite alternate-reverse;
+}
+
+@keyframes bg-animation {
+  0%{
+    background-position: left;
+    background-size: 100%;
+  }
+  100%{
+    background-position: right;
+    background-size: 500%;
+  }
+}
+
+#root{
+  width: 100vw;
+  height: 100vh;
+  user-select: none;
+}
+/*
+@media (prefers-color-scheme: dark) {
+  body { background: #333; color: white; }
+}
+
+@media (prefers-color-scheme: light) {
+  body { background: #ddd; color: black; }
+}*/
